@@ -112,17 +112,17 @@ st.markdown(f"**🧠 Risk Assessment**: :red[{risk_level}]")
 st.markdown(f"**📚 Clinical Notes**: {clinical_notes}")
 
 # Generate illustrative DVH-like plot
-st.subheader("📈 Dose Volume Histogram (Illustrative Simulation)")
-dvh_volumes = np.linspace(0, 100, 100)
-dvh_doses = np.maximum(0, dose_input - dvh_volumes / 2)
+# st.subheader("📈 Dose Volume Histogram (Illustrative Simulation)")
+# dvh_volumes = np.linspace(0, 100, 100)
+# dvh_doses = np.maximum(0, dose_input - dvh_volumes / 2)
 
-fig, ax = plt.subplots()
-sns.lineplot(x=dvh_doses, y=dvh_volumes, ax=ax)
-ax.invert_yaxis()
-ax.set_xlabel("Dose (Gy)")
-ax.set_ylabel("Volume (%)")
-ax.set_title(f"Simulated DVH for {oar_selected.replace('_', ' ').title()}")
-st.pyplot(fig)
+# fig, ax = plt.subplots()
+# sns.lineplot(x=dvh_doses, y=dvh_volumes, ax=ax)
+# ax.invert_yaxis()
+# ax.set_xlabel("Dose (Gy)")
+# ax.set_ylabel("Volume (%)")
+# ax.set_title(f"Simulated DVH for {oar_selected.replace('_', ' ').title()}")
+# st.pyplot(fig)
 
 # DataTable of constraints
 st.subheader("📑 Dose Constraint Summary")
